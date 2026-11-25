@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
 import { DartsListPage } from "./pages/DartsListPage";
 import { DartsSinglePage } from "./pages/DartsSinglePage";
+import { DartsCreatePage } from "./pages/DartsCreatePage";
 import "./App.css";
 
 export function App() {
@@ -14,6 +15,11 @@ export function App() {
                 Dartsozók
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink to="/new-darts" className="nav-link">
+                Új dartsozó
+              </NavLink>
+            </li>
           </ul>
         </div>
       </nav>
@@ -21,6 +27,7 @@ export function App() {
       <Routes>
         <Route path="/" element={<DartsListPage />}/>
         <Route path="/darts/:dartsId" element={<DartsSinglePage />} />
+         <Route path="/new-darts" element={<DartsCreatePage />} />
       </Routes>
     </Router>
   );
