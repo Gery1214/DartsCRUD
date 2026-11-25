@@ -4,7 +4,7 @@ import "./App.css";
 
 export function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
@@ -18,9 +18,9 @@ export function App() {
       </nav>
 
       <Routes>
-        <Route path="/" element={<DarstListPage />} />
+        <Route path="/" element={<DartsListPage />} />
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
 
